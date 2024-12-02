@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.display {
+    display: inline-block;
+}
+
+header {
+    height: 136px;
+    padding: 0 17px;
+    
+}
+header .logo {
+    padding: 13px 20px;
+    transform: translateY(-47px);
+}
+header .logo img {
+    width: 190px;
+    height: 41.8px;
+    
+}
+header ul.nav {
+    height: 67.8px;
+    /* background-color: blue; */
+    width: 800px;
+}
+header ul.nav li {
+    display: inline-block;
+    line-height: 67.8px;
+    padding: 0 6px;
+    border: 0px;
+    transition: width 0.3s ease;
+}
+ul.nav li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+.hover-border {
+    position: relative; /* Để sử dụng pseudo-element */
+    display: inline-block; /* Đảm bảo kích thước gọn nội dung */
+    padding: 10px;
+    transition: transform 0.5s ease !important; 
+}
+.hover-border:hover i {
+    transform: rotate(90deg);
+}
+.hover-border::after {
+    content: ''; /* Tạo pseudo-element */
+    position: absolute; /* Định vị tương đối với thẻ cha */
+    bottom: 0; /* Căn ở cạnh dưới */
+    left: 0; /* Bắt đầu từ bên trái */
+    width: 0; /* Chiều rộng ban đầu là 0 */
+    height: 0.5px; /* Độ dày của đường viền */
+    background-color: black; /* Màu sắc đường viền */
+    transition: width 0.3s ease; /* Hiệu ứng chạy từ từ */
+    
+}
+.hover-border:hover::after {
+    width: 100%; /* Khi hover, đường viền chạy đủ chiều rộng */
+}
+
+.search {
+    transform: translateY(-68px);
+}
+.search input {
+    width: 160px;
+    height: 37px;
+}
+.search i {
+    transform: translate3d(-26px, 3px, 0px);
+}
+.user {
+    transform: translateY(-62px);
+
+}
+.user i {
+    display: inline-block;
+    font-size: 27px;
+    padding: 0 4px;
+
+}
