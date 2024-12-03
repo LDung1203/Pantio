@@ -8,9 +8,16 @@
     display: inline-block;
 }
 
+#hostline {
+    border-bottom: 0.5px solid;
+    padding: 5px 0;
+}
+#hostline p {
+    line-height: 22.5px;
+}
 header {
     height: 136px;
-    padding: 0 17px;
+    padding: 0 8px;
     
 }
 header .logo {
@@ -27,14 +34,14 @@ header ul.nav {
     /* background-color: blue; */
     width: 800px;
 }
-header ul.nav li {
+header ul.nav>li {
     display: inline-block;
     line-height: 67.8px;
     padding: 0 6px;
     border: 0px;
     transition: width 0.3s ease;
 }
-ul.nav li a {
+ul.nav>li>a {
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -63,7 +70,41 @@ ul.nav li a {
 .hover-border:hover::after {
     width: 100%; /* Khi hover, đường viền chạy đủ chiều rộng */
 }
-
+.hover-border .sub-nav {
+    position: absolute;
+    display: none;
+    /* border: 1px solid #000; */
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 90px; 
+    background-color: #fff
+}
+.hover-border:hover .sub-nav{
+    display: block;
+    z-index: 10;
+    transform: translateX(-24px);
+}
+.sub-nav li {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+}
+.sub-nav li a {
+    color: #000;
+    text-decoration: none;
+   
+}
+.sub-nav-chdr {
+    display: none !important;
+    transform: translate3d(178px, -38px, 0px)!important;
+}
+.sub-2:hover .sub-nav-chdr {
+    display: block !important;;
+}
+.sub-1 {
+    height: 225px!important;
+}
 .search {
     transform: translateY(-68px);
 }
@@ -83,4 +124,60 @@ ul.nav li a {
     font-size: 27px;
     padding: 0 4px;
 
+}
+
+/* ---------------------------------------------slide--------------------------------------------------- */
+
+#slide img {
+    width: 100%;
+}
+
+/* ------------------------------------------------footer------------------------------------------------ */
+footer {
+    width: 100%;
+    padding: 50px 20px;
+}
+footer .ft-1 {
+    width: 24%;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.ft-1>ul .collum {
+    width: 49%;
+    display: inline-block;
+}
+.ft-1 h3 {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.ft-1>ul li {
+    list-style-type: none;
+    /* display: inline-block; */
+}
+.ft-1>ul li>a {
+    color: #000;
+    text-decoration: none;
+}
+.ft-1 li a i {
+    font-size: 10px;
+    padding-right: 5px;
+}
+.ft-1 .social-network i {
+    padding: 10px 10px;
+    border: 1px solid;
+    border-radius: 50px;
+}
+.ft-1 img {
+    width: 100%;
+}
+
+
+
+
+.footer-bottom {
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: #850707;
 }
