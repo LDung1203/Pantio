@@ -26,3 +26,16 @@ const modalClose = document.querySelector('.js-modal-close')
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+        document.addEventListener('DOMContentLoaded', function (){
+            const userIcon = document.querySelector('.user .fa-circle-user');
+            const loginForm = document.getElementById('login-form');
+            const closeLoginForm = document.getElementById('close-login-form');
+            userIcon.addEventListener('click', function (){
+                loginForm.style.display = 'flex';
+            });
+            closeLoginForm.addEventListener('click', function (){
+                loginForm.style.display = 'none';
+            });
+        });
