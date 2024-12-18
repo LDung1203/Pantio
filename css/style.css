@@ -8,6 +8,34 @@
     display: inline-block;
 }
 
+
+
+
+
+
+.section {
+  height: 44.4px;
+  padding: 0 20px;
+  border: 1px solid #333;
+  border-color: rgba(0, 0, 0, 0.3);
+  line-height: 44.4px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: monospace;
+  margin-top: 20px;
+}
+.section a:hover {
+  border-bottom: 1px solid;
+}
+.address {
+  height: 32.4px;
+  background-color: #7d0000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 32.4px;
+  color: #fff;
+  font-size: 14px;
+}
 #hostline {
     border-bottom: 0.5px solid;
     padding: 5px 0;
@@ -299,7 +327,6 @@ ul.nav>li>a {
 }
 /*phần quảng cáo*/
 .advertisement {
-  border-bottom: 2px solid;
   padding-bottom: 50px;
 }
 .advertisement .content-ad {
@@ -317,6 +344,7 @@ ul.nav>li>a {
 footer {
     width: 100%;
     padding: 50px 20px;
+    border-top: 3px solid #9a0000;
 }
 footer .ft-1 {
     width: 24%;
