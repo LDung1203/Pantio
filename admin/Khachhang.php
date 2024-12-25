@@ -51,7 +51,6 @@
             <li><a href="Trangchu.php"><i class="fa fa-home fa-fw"></i>TRANG CHỦ</a></li>
             <li><a href="Thongtin.html"><i class="fa fa-bar-chart fa-fw"></i>THÔNG TIN</a></li>
             <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>ĐỊA ĐIỂM</a></li>
-            <li><a href="#"  class="active"><i class="fa fa-users fa-fw"></i>KHÁCH HÀNG</a></li>
             <li><a href="Chinhsua.html"><i class="fa fa-sliders fa-fw"></i>CHỈNH SỬA</a></li>
             <li><a href="../Dangky.html"><i class="fa fa-eject fa-fw"></i>ĐĂNG XUẤT</a></li>
           </ul>  
@@ -82,7 +81,6 @@
                     <td><a href="" class="white-text templatemo-sort-by">Số điện thoại <span class="caret"></span></a></td>
                     <td><a href="" class="white-text templatemo-sort-by">Mật khẩu <span class="caret"></span></a></td>
                     <td><a href="" class="white-text templatemo-sort-by">Ngày tạo tài khoản <span class="caret"></span></a></td>
-                    <td>Edit</td>
                     <td>Delete</td>
                   </tr>
                 </thead>
@@ -99,12 +97,9 @@
                               <td><?php echo $r['id'] ?></td>
                               <td><?php echo $r['phone'] ?></td>
                               <td><?php echo $r['password'] ?></td>
-                              <td><?php echo $r['registration_date'] ?></td>
+                              <td><?php echo $r['registration_date'] ?></td>ss
                               <td>
-                                  <a href="edit.php?hid=<?php echo $r['id'] ?>" class="btn btn-warning">Sửa</a>
-                              </td>
-                              <td>
-                                  <a class="btn btn-danger" href="delete.php?hid=<?php echo $r['id'] ?>">Xóa</a>
+                                  <a class="btn btn-danger" href="user/delete.php?hid=<?php echo $r['id'] ?>">Xóa</a>
                               </td>
                           </tr>
                       <?php

@@ -1,18 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-</head>
-<body>
-    <h1>Admin Dashboard</h1>
-    <p id="visit-count">Đang tải số lượt truy cập...</p>
-</body>
-</html> -->
-<?php
-    include 'counter.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,7 +56,6 @@
           <ul>
             <li><a href="#" class="active"><i class="fa fa-home fa-fw"></i>TRANG CHỦ</a></li>
             <li><a href="Thongtin.html"><i class="fa fa-bar-chart fa-fw"></i>THÔNG TIN</a></li>
-            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>ĐỊA ĐIỂM</a></li>
             <li><a href="Khachhang.php"><i class="fa fa-users fa-fw"></i>KHÁCH HÀNG</a></li>
             <li><a href="Chinhsua.html"><i class="fa fa-sliders fa-fw"></i>CHỈNH SỬA</a></li>
             <li><a href="../Dangky.html"><i class="fa fa-eject fa-fw"></i>ĐĂNG XUẤT</a></li>
@@ -98,9 +82,19 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">THÍCH VIẾT GÌ THÌ VIẾT</h2><hr>
-              <p></p>
-              <p></p>              
+              <h2 class="templatemo-inline-block">GHI CHÚ</h2><hr>
+              <form action="note/save_note.php" method="POST">
+              <textarea name="note" id="note" cols="50" rows="10" style="
+                      border-radius: 20px;
+                      border-color: aquamarine;
+                      padding: 15px;"><?php include 'note/get_note.php'; ?></textarea><br>
+                  <button type="submit" style="
+                  padding: 2px 22px;
+                  float: right;
+                  border-radius: 20px;
+                  border-color: aquamarine;
+                  font-family: 'Open Sans';">Lưu</button>
+              </form>        
             </div>
             <div class="templatemo-content-widget white-bg col-1 text-center">
               <i class="fa fa-times"></i>
@@ -227,19 +221,6 @@
               </div>
             </div>           
           </div> <!-- Second row ends -->
-          <div class="templatemo-flex-row flex-content-row templatemo-overflow-hidden"> <!-- overflow hidden for iPad mini landscape view-->
-            <div class="col-1 templatemo-overflow-hidden">
-              <div class="templatemo-content-widget white-bg templatemo-overflow-hidden">
-                <i class="fa fa-times"></i>
-                <div class="templatemo-flex-row flex-content-row">
-                  <div class="col-1 col-lg-6 col-md-12">
-                    <h2 class="text-center">GHI CHÚ<span class="badge">new</span></h2>
-                    <div id="pie_chart_div" class="templatemo-chart"></div> <!-- Pie chart div -->
-                  </div>
-                </div>                
-              </div>
-            </div>
-          </div>
           <footer class="text-right">
             <p>Đây là trang admin đẹp nhât thế giới
             | Designed by <a href="" target="_parent">LD:1203</a></p>
