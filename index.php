@@ -109,12 +109,15 @@
     </div>
     <div class="img-items">
         <div class="img-dis">
-                <img class="img-border js-buy" src="img/sale1.png" alt="1" height="400" width="300"></img>
-            <a href="" target="_blank" class = "img-name">Áo sơ mi kiểu đầm công sở</a>
-            <div class="gia_km_goc">
-                <p class="gia_km">698,600₫</p>
-                <p class="gia_goc">698,600₫</p>
-            </div>
+            <a href="user/Mathang.html">
+                    <img class="img-border js-buy" src="img/sale1.png" alt="1" height="400" width="300"></img>
+                    <a href="" target="_blank" class = "img-name">Áo sơ mi kiểu đầm công sở</a>
+                    <div class="gia_km_goc">
+                        <p class="gia_km">698,600₫</p>
+                        <p class="gia_goc">698,600₫</p>
+                    </div>
+            </a>
+            
         </div>
         <div class="img-dis">
                 <img class="img-border js-buy" src="img/sale2.png" alt="1" height="400" width="300"></img>
@@ -410,6 +413,6 @@
         </div>
     </div>
     <div class="footer-bottom"></div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 </html>

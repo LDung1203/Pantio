@@ -49,9 +49,9 @@
         <nav class="templatemo-left-nav">          
           <ul>
             <li><a href="Trangchu.php"><i class="fa fa-home fa-fw"></i>TRANG CHỦ</a></li>
-            <li><a href="Thongtin.html"><i class="fa fa-bar-chart fa-fw"></i>THÔNG TIN</a></li>
-            <li><a href="maps.html"><i class="fa fa-map-marker fa-fw"></i>ĐỊA ĐIỂM</a></li>
-            <li><a href="Chinhsua.html"><i class="fa fa-sliders fa-fw"></i>CHỈNH SỬA</a></li>
+            <li><a href="Thongtin.php"><i class="fa fa-bar-chart fa-fw"></i>THÔNG TIN</a></li>
+            <li><a href="#"><i class="fa fa-map-marker fa-fw"></i>KHÁCH HÀNG</a></li>
+            <li><a href="Dondathang"><i class="fa fa-sliders fa-fw"></i>ĐƠN ĐẶT HÀNG</a></li>
             <li><a href="../Dangky.html"><i class="fa fa-eject fa-fw"></i>ĐĂNG XUẤT</a></li>
           </ul>  
         </nav>
@@ -141,7 +141,7 @@
             </div>
             <div class="templatemo-content-widget white-bg col-1 text-center templatemo-position-relative">
               <i class="fa fa-times"></i>
-              <img src="images/person.jpg" alt="Bicycle" class="img-circle img-thumbnail margin-bottom-30">
+              <img src="images/bicycle.jpg" alt="Bicycle" class="img-circle img-thumbnail margin-bottom-30">
               <h2 class="text-uppercase blue-text margin-bottom-5">Admin</h2>
               <h3 class="text-uppercase margin-bottom-70">Dũng đẹp trai</h3>
               <div class="templatemo-social-icons-container">

@@ -427,6 +427,7 @@ footer .ft-1 {
 .content p {
   text-align: justify;
   padding: 30px 20px;
+  height: 74%;
 }
 .content input {
   display: block;
