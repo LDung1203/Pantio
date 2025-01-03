@@ -95,7 +95,7 @@ $row=mysqli_fetch_assoc($result);
                 <div class="text-center">
                     <button type="submit" class="btn btn-success btn-lg">Sửa</button>
                     <button type="reset" class="btn btn-danger btn-lg">Hủy</button>
-                    <a href="Thongtin.php" class="btn btn-info btn-lg">Quay lại trang chủ</a>
+                    <a href="../Thongtin.php" class="btn btn-info btn-lg">Quay lại trang chủ</a>
                 </div>
             </form>
         </div>

@@ -107,27 +107,43 @@
             <br>
             <img class="img-3que" src="img/3que.png">
         </div>
-        <div class="img-items">
-                <?php
-                    include "connt/connect.php";
-                    $sql = "SELECT * FROM product";
-                    $result = $conn->query($sql);
-                    
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            // Xử lý đường dẫn ảnh
-                            $imagePath = !empty($row['image']) ? 'admin/' . str_replace('../', '', $row['image']) : 'admin/default.jpg';
-                
-                            echo "<div class='img-dis'>";
-                            echo "<img src='" . htmlspecialchars($imagePath) . "' class='img-border' style='width: 300px; height: 400px;' alt='Product Image'>";
-                            echo "<a href='' target='_blank' class='img-name js-buy'>" . htmlspecialchars($row['name']) . "</a>";
-                            echo "<p>Giá: " . htmlspecialchars($row['price']) . " VND</p>";
-                            echo "</div>";
-                        }
-                    } else {
-                        echo "Không có sản phẩm nào.";
-                    }
-                ?>
+        <div class="img-items flex">
+            <div class="img-items">
+                <?php include "php/display.php"; ?>
+                <?php if (!empty($productsByType)): ?>
+                    <?php foreach ($productsByType as $type => $products): ?>
+                        <!-- Tiêu đề của từng loại -->
+                        <div class="category">
+                            <h2><?php echo htmlspecialchars($type); ?></h2>
+                            <div class="img-category">
+                                <?php foreach ($products as $product): ?>
+                                    <div class="img-dis">
+                                        <?php 
+                                        // Chuyển đường dẫn ../ thành admin/
+                                        $imagePath = str_replace('../', 'admin/', $product['image']); 
+                                        ?>
+                                        <!-- Hiển thị ảnh sản phẩm -->
+                                        <img src="<?php echo htmlspecialchars($imagePath); ?>" 
+                                            class="img-border" 
+                                            style="width: 300px; height: 400px;" 
+                                            alt="Product Image">
+
+                                        <!-- Hiển thị tên sản phẩm -->
+                                        <a href="" target="_blank" class="img-name js-buy">
+                                            <?php echo htmlspecialchars($product['name']); ?>
+                                        </a>
+
+                                        <!-- Hiển thị giá sản phẩm -->
+                                        <p>Giá: <?php echo htmlspecialchars($product['price']); ?> VND</p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Không có sản phẩm nào để hiển thị.</p>
+                <?php endif; ?>
+            </div>
         </div>
         <!-- <br><br> -->
         <! DANH MỤC NỔI BẬT>
